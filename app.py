@@ -18,7 +18,8 @@ with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/2014/2014350.png", width=60)
     st.title("⚙️ 控制面板")
 
-    api_key = st.text_input("🔑 API Key", type="password", help="输入 DeepSeek Key")
+    # api_key = st.text_input("🔑 API Key", type="password", help="输入 DeepSeek Key")
+    api_key = st.secrets["DEEPSEEK_API_KEY"]
     base_url = "https://api.deepseek.com"
 
     st.markdown("---")
@@ -144,4 +145,5 @@ st.markdown(
     </div>
     """,
     unsafe_allow_html=True
+
 )
